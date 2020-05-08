@@ -83,6 +83,11 @@ class Crystal < Formula
 
     ENV.prepend_path "CRYSTAL_LIBRARY_PATH", buildpath/"gc/.libs"
 
+    unless OS.mac?
+      ENV["CXX"] = "clang++"
+      ENV["AR"] = "clang"
+    end
+
     # Build crystal
     (buildpath/".build").mkpath
     system "make", "deps"
