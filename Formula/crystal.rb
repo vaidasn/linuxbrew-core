@@ -87,6 +87,7 @@ class Crystal < Formula
       ENV["CXX"] = "clang++"
       ENV["CC"] = "clang"
       ENV["AR"] = "clang"
+      ENV["EXPORT_CC"] = "CC='clang -fuse-ld=lld'"
     end
 
     # Build crystal
