@@ -24,6 +24,7 @@ class Makensis < Formula
       "CC=#{ENV.cc}",
       "CXX=#{ENV.cxx}",
       "PREFIX_DOC=#{share}/nsis/Docs",
+      "PREFIX_DATA=#{share}/nsis",
       "SKIPUTILS=Makensisw,NSIS Menu,zip2exe",
       # Don't strip, see https://github.com/Homebrew/homebrew/issues/28718
       "STRIP=0",
