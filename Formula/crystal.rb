@@ -85,6 +85,7 @@ class Crystal < Formula
 
     unless OS.mac?
       ENV["CXX"] = "clang++"
+      ENV["CC"] = "clang"
       ENV["AR"] = "clang"
     end
 
